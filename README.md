@@ -1,99 +1,51 @@
-# .NET Core Home
+﻿# .NET Core Home
 
-The core repository is the starting point to engage in and learn about the
-.NET Core stack. 
+The dotnet/core repository is a good starting point for .NET Core.
 
-> **Note:** please note that this repository is not for filing product issues.
-> If you run into an issue using .NET Core, there are multiple repos where you can 
-> file an issue:
-> * [dotnet/cli](https://github.com/dotnet/cli) - for CLI tools and questions
-> * [dotnet/corefx](https://github.com/dotnet/corefx) - for API issues and questions
-> * [dotnet/coreclr](https://github.com/dotnet/coreclr) - for runtime issues
-> * [nuget/home](https://github.com/nuget/home) - for NuGet questions and issues
-> * [aspnet/home](https://github.com/aspnet/home) - for ASP.NET Core questions and issues.
-> 
-> We will be removing the ability to file issues on this repo in the near future.
+The latest major release is [.NET 5.0](release-notes/5.0/README.md). The latest patch updates are listed in [.NET Core release notes](release-notes/README.md).
 
-## Get Started
+## .NET Core Releases
 
-If you're new to .NET Core and have 10 minutes to try it, start here: 
-- [What is .NET Core?](https://www.microsoft.com/net/core/platform)
-- [Get Started with .NET Core on Windows, OSX and Linux](https://www.microsoft.com/net/core)
+* [Download the latest .NET Core SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core releases](releases.md)
+* [.NET Core daily builds](daily-builds.md)
 
-If you have some more time and want to go deeper:
-- [Install ASP.NET Core on Windows, OSX and Linux](https://github.com/aspnet/home)
-- [Install .NET Core on Windows, OSX and Linux](https://github.com/dotnet/coreclr#get-net-core)
+## Learn about .NET Core
 
-## .NET Core Platform
+* [Learn about .NET Core](https://docs.microsoft.com/dotnet/core)
+* [.NET Core Roadmap](https://github.com/dotnet/core/blob/main/roadmap.md)
+* [Learn about the .NET platform](https://docs.microsoft.com/dotnet/standard/)
+* [.NET Core release notes](https://github.com/dotnet/core/blob/main/release-notes/README.md)
+* [.NET Core Announcements](https://github.com/dotnet/announcements)
+* [.NET Core blog](https://blogs.msdn.microsoft.com/dotnet/tag/net-core/)
 
-The .NET Core platform is made of several components, which includes the
-managed compilers, the runtime, the base class libraries, and numerous application models such as
-ASP.NET.
+## Getting help
 
-* [Roadmap](roadmap.md)
-* [.NET Core Framework](https://github.com/dotnet/corefx)
-* [.NET Core Runtime](https://github.com/dotnet/coreclr)
-* [.NET Compiler Platform ("Roslyn")](https://github.com/dotnet/roslyn)
-* [ASP.NET Core](https://github.com/aspnet/home)
+* [File an issue](Documentation/core-repos.md)
+* [Ask on Stack Overflow](https://stackoverflow.com/questions/tagged/.net-core)
+* [Contact Microsoft Support](https://support.microsoft.com/contactus/)
+* [VS Developer Community Portal](https://developercommunity.visualstudio.com/) for .NET Framework feedback (or via [Report a Problem](https://aka.ms/vs-rap) tool)
 
 ## How to Engage, Contribute and Provide Feedback
 
-All projects accept contributions:
+The .NET Core team encourages [contributions](https://github.com/dotnet/runtime/blob/master/CONTRIBUTING.md), both issues and PRs. The first step is finding the [.NET Core repository](Documentation/core-repos.md) that you want to contribute to.
 
-* [.NET Core Contributing Guide](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/contributing.md)
-* [.NET Compiler Platform ("Roslyn")](https://github.com/dotnet/roslyn/wiki/Contributing-Code)
-* [ASP.NET Contributing Guide](https://github.com/aspnet/Home/blob/master/CONTRIBUTING.md)
+Check the [product roadmap](https://aka.ms/dotnet-product-roadmap) to see what the team is focusing on.
 
-You are also encouraged to start a discussion by posting on the
-[.NET Foundation Forums](http://forums.dotnetfoundation.org/) or filing an
-issue in the corresponding GitHub project. See the contributing guides for more
-details.
+### Community
+
+This project uses the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct) to define expected conduct in our community.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting a project maintainer at conduct@dotnetfoundation.org.
 
 ## .NET Foundation
 
-The .NET Core platform is part of the [.NET Foundation](http://www.dotnetfoundation.org/projects).
-
-* [.NET Core Project](http://www.dotnetfoundation.org/netcore)
-* [.NET Compiler Platform ("Roslyn" Project)](http://www.dotnetfoundation.org/dotnet-compiler-platform)
-* [ASP.NET Core Project](http://www.dotnetfoundation.org/aspnet-core)
+The .NET Core platform is part of the [.NET Foundation](https://www.dotnetfoundation.org).
 
 ## Licenses
 
-.NET Core platform projects typically use either the [MIT](LICENSE) or
-[Apache 2](http://www.apache.org/licenses/LICENSE-2.0) licenses for code.
+.NET Core repos typically use either the [MIT](LICENSE.TXT) or
+[Apache 2](https://www.apache.org/licenses/LICENSE-2.0) licenses for code.
 Some projects license documentation and other forms of content under
-[Creative Commons Attribution 4.0](http://creativecommons.org/licenses/by/4.0/).
+[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-See specific projects to understand the license used.
-
-## Understanding the relationship between .NET Core and the .NET Framework
-
-.NET Core and the .NET Framework have (for the most part) a subset-superset
-relationship. .NET Core is named "Core" since it contains the core features from
-the .NET Framework, for both the runtime and framework libraries. For example,
-.NET Core and the .NET Framework share the GC, the JIT and types such as
-`String` and `List<T>`.
-
-.NET Core was created so that .NET could be open source, cross platform and be
-used in more resource-constrained environments. We have also published a subset
-of the [.NET Reference Source](https://github.com/Microsoft/referencesource)
-under the MIT license, so that you and the community can port additional .NET
-Framework features to .NET Core.
-
-## Understanding the relationship between .NET Core and Mono
-
-Mono is an important part of the .NET ecosystem, particularly for client
-scenarios (e.g. Xamarin). We will look for ways to collaborate with Mono
-developers and encourage them to take our code to improve Mono. We will also
-look for opportunities to improve .NET Core with MIT-licensed Mono code.
-
-An important collaboration opportunity is making .NET Core NuGet packages
-(produced from this code) work on Mono. The SIMD NuGet package is a perfect
-example.
-
-## Learning about ASP.NET and .NET Core
-
-[ASP.NET Core](https://github.com/aspnet/home) is a new cross-platform version of
-ASP.NET that is designed for the cloud, and runs on Windows, Linux and Mac. It
-targets .NET Core by default, but you may choose to target the .NET Framework on
-Windows.
+See specific [repos](Documentation/core-repos.md) to understand the license used.
